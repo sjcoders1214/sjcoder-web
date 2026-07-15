@@ -1,5 +1,4 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/sjcoders/public_html/
-    - /usr/bin/rsync -a --delete dist/ $DEPLOYPATH
+    - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' dist/ /home/sjcoders/public_html/
