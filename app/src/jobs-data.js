@@ -5,7 +5,6 @@ export const jobs = [
   {
     title: 'Software Development Intern (Healthcare AI)',
     status: 'Hiring Now',
-    startDate: '1st August 2026',
     duration: '6 Months',
     stipend: 'Unpaid Internship',
     tags: ['React.js', 'Java', 'Python', 'Django', 'REST APIs', 'AI & Healthcare Integrations'],
@@ -27,7 +26,6 @@ export const jobs = [
   {
     title: 'Software Testing Intern (Manual & Automation)',
     status: 'Hiring Now',
-    startDate: '1st August 2026',
     duration: '6 Months',
     stipend: 'Unpaid Internship',
     tags: ['Manual Testing', 'Automation Testing', 'Selenium', 'API Testing', 'Postman', 'Test Case Design'],

@@ -11,7 +11,6 @@ function jobCard(job) {
           <span class="job-badge">${job.status}</span>
           <h3>${job.title}</h3>
           <div class="job-meta">
-            <span class="job-meta-item"><i data-lucide="calendar"></i>${job.startDate}</span>
             <span class="job-meta-item"><i data-lucide="clock"></i>${job.duration}</span>
             <span class="job-meta-item"><i data-lucide="indian-rupee"></i>${job.stipend}</span>
           </div>
