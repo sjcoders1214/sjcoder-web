@@ -3,7 +3,19 @@ import { initPage, initReveal } from './common.js';
 import { jobs } from './jobs-data.js';
 
 function jobCard(job) {
-  const applyHref = `mailto:${job.applyEmail}?subject=${encodeURIComponent(job.applySubject)}`;
+  const applyBody = `Dear SJ Coders Team,
+
+I would like to apply for the ${job.title} position.
+
+A little about myself:
+[Share your background, relevant skills, and why you're a good fit]
+
+I have attached my resume for your reference.
+
+Regards,
+[Your Name]
+[Phone Number]`;
+  const applyHref = `mailto:${job.applyEmail}?subject=${encodeURIComponent(job.applySubject)}&body=${encodeURIComponent(applyBody)}`;
   return `
     <details class="job-card glass-card reveal">
       <summary class="job-summary">

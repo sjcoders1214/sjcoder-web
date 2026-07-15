@@ -46,8 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const organization = form.querySelector('#organization').value.trim();
+      const serviceSelect = form.querySelector('#service');
+      const service = serviceSelect.options[serviceSelect.selectedIndex]?.text || '';
+      const message = form.querySelector('#message').value.trim();
+
+      const subject = `Website Enquiry – ${name}${organization ? ' (' + organization + ')' : ''}`;
+      const body = `Hi SJ Coders Team,
+
+Name: ${name}
+Email: ${email}
+Organization: ${organization || 'N/A'}
+Service Interest: ${service || 'N/A'}
+
+Message:
+${message}`;
+
+      window.location.href = `mailto:info@sjcoders.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
       const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Message Sent!';
+      btn.textContent = 'Opening Email App...';
       btn.style.background = 'linear-gradient(135deg, #14b8a6, #06b6d4)';
       setTimeout(() => { btn.innerHTML = 'Send Message <i data-lucide="send"></i>'; btn.style.background = ''; if (window.lucide) lucide.createIcons(); }, 3000);
       form.reset();
