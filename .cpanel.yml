@@ -1,4 +1,0 @@
----
-deployment:
-  tasks:
-    - /usr/bin/rsync -a --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='.gitignore' dist/ /home/sjcoders/public_html/
