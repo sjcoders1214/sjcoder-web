@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sjcoders/public_html/
+    - npm ci
+    - npm run build
+    - /usr/bin/rsync -a --delete dist/ $DEPLOYPATH
