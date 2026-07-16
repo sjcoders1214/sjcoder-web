@@ -25,6 +25,6 @@ dist-ssr
 # Build output — generated from app/ by `npm run build` and committed
 # automatically by the "Build site" GitHub Action (.github/workflows/build.yml).
 # Ignored locally so a dev build doesn't show up as changes to commit.
-/index.html
-/careers.html
+/index.*
+/careers.*
 /assets/
